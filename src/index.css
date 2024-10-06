@@ -1,0 +1,98 @@
+:root {
+    --light-blue: #5372EF;
+    --white: white;
+
+    --bg-color: var(--light-blue);
+    --card-color: var(--white);
+    --card-font-size: 1.5vw;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: "Roboto";
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    all: unset;
+}
+
+.btn {
+    --btn-color: black;
+    --btn-font-color: white;
+    --width: 30%;
+
+    text-align: center;
+    font-weight: 500;
+    background-color: var(--btn-color);
+    color: var(--btn-font-color);
+    width: var(--width);
+    border-radius: 2.5rem;
+    padding: 2.5%;
+}
+
+.card {
+    inset: 0;
+    margin: auto;
+    background-color: var(--card-color);
+    width: 40%;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5%;
+
+    h1 {
+        font-size: var(--card-font-size);
+        margin-top: 1.5%;
+        margin-bottom: 5.5%;
+    }
+
+    p {
+        font-size: calc(var(--card-font-size)*0.75);
+        width: 100%;
+        text-align: center;
+    }
+
+    .author {
+        margin-top: 5%;
+        text-align: end;
+    }
+
+    span {
+        font-weight: 900;
+    }
+
+    .btn {
+        --btn-color: var(--bg-color);
+        --width: 20%;
+    }
+}
+
+.card-footer {
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+    padding-top: 4.5%;
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}

@@ -5,9 +5,12 @@ export default function Card() {
     const [quote, setQuote] = useState(null);
 
     async function handleGetRandomQuote() {
+        const apiKey = await import.meta.env.VITE_API_KEY;
         await axios.get('https://quotes15.p.rapidapi.com/quotes/random/?language_code=en', {
+            //I forgot to keep the api-key secret before pushing it to gihub
+            //Gotta Change the api-key again -.-
             headers: {
-                'x-rapidapi-key': 'b99349a452msh5f60a5741e3d746p172f41jsn7e8e9c3eb113',
+                'x-rapidapi-key': apiKey,
                 'x-rapidapi-host': 'quotes15.p.rapidapi.com'
             }})
             .then(function (response) {

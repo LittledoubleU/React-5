@@ -4,7 +4,7 @@
 
     --bg-color: var(--light-blue);
     --card-color: var(--white);
-    --card-font-size: 1.5vw;
+    --card-font-size: 150%;
 }
 
 * {
@@ -48,6 +48,8 @@ button {
     width: var(--width);
     border-radius: 2.5rem;
     padding: 2.5%;
+    text-wrap: nowrap;
+    font-size: var(--card-font-size);
 }
 
 .card {
@@ -84,7 +86,6 @@ button {
 
     .btn {
         --btn-color: var(--bg-color);
-        --width: 20%;
     }
 }
 
@@ -95,4 +96,22 @@ button {
     margin-top: 5%;
     display: flex;
     justify-content: space-between;
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    .card {
+        width: 60%;
+    }
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+    .card {
+        width: 80%;
+    }
+}
+
+@media all and (max-width: 480px) {
+    .card {
+        width: 90%;
+    }
 }
